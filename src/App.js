@@ -26,6 +26,7 @@ function FormTodo({ addTodo }) {
     e.preventDefault();
     if (!value) return;
     addTodo(value);
+    
     setValue("");
   };
 
