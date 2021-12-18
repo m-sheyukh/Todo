@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useState } from "react";
 import "./App.css";
 import { Button, Card, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +18,8 @@ function Todo({ todo, index, markTodo, removeTodo }) {
     </div>
   );
 }
+
+//Set Form Todo
 
 function FormTodo({ addTodo }) {
   const [value, setValue] = React.useState("");
@@ -44,7 +46,7 @@ function FormTodo({ addTodo }) {
 }
 
 function App() {
-  const [todos, setTodos] = React.useState([
+  const [todos, setTodos] = useState([
     {
       text: "This is a sampe todo",
       isDone: false
